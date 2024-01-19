@@ -13,9 +13,9 @@ def show_session(key):
 
     response = make_response(jsonify({
         'session': {
-            'session_key': key,
-            'session_value': session[key],
-            'session_accessed': session.accessed,
+            'session_key':key,
+            'session_value':session[key],
+            'session_accessed':session.accessed,
         },
         'cookies': [{cookie: request.cookies[cookie]}
             for cookie in request.cookies],
